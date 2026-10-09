@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0b0f">
+<meta name="description" content="باشگاه ورزشی مینایی کرمانشاه؛ آموزش کاراته، نینجای مبارز، ژیمناستیک، پارکور و آمادگی جسمانی.">
+<title>باشگاه ورزشی مینایی | فراتر از قدرت</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --bg:#090a0e;
+  --surface:#111319;
+  --surface2:#171a22;
+  --red:#ff263d;
+  --red2:#d90d27;
+  --white:#f6f7fb;
+  --muted:#9297a5;
+  --border:rgba(255,255,255,.09);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body{
+  font-family:'Vazirmatn',Tahoma,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--white);
+  line-height:1.9;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 10% 20%,rgba(255,38,61,.075),transparent 35%),
+    radial-gradient(ellipse at 90% 70%,rgba(255,38,61,.04),transparent 30%);
+}
+
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img,video{max-width:100%}
+
+.container{
+  width:min(1200px,91%);
+  margin:auto;
+}
+
+::selection{
+  background:var(--red);
+  color:white;
+}
+
+/* نوار باریک بالایی */
+.top-line{
+  height:3px;
+  background:linear-gradient(90deg,transparent,var(--red),#ff7885,transparent);
+  background-size:200% 100%;
+  animation:lineFlow 4s linear infinite;
+}
+
+@keyframes lineFlow{
+  to{background-position:200% 0}
+}
+
+/* هدر */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(9,10,14,.83);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+}
+
+.navbar{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:0;
+}
+
+.brand-symbol{
+  width:46px;
+  height:46px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(145deg,#ff465a,#a5001a);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  font-size:22px;
+  font-weight:900;
+  box-shadow:0 0 28px #ff263d33;
+}
+
+.brand-text strong{
+  display:block;
+  font-size:16px;
+  font-weight:900;
+}
+
+.brand-text small{
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:23px;
+}
+
+nav a{
+  color:#c6c8d0;
+  font-size:12px;
+  transition:.25s;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  bottom:-8px;
+  right:0;
+  width:0;
+  height:2px;
+  background:var(--red);
+  transition:.25s;
+}
+
+nav a:hover{color:white}
+nav a:hover::after{width:100%}
+
+.nav-cta,.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  border:0;
+  cursor:pointer;
+  transition:transform .25s,box-shadow .25s,background .25s;
+  font-weight:800;
+}
+
+.nav-cta{
+  padding:10px 17px;
+  background:var(--red);
+  color:white;
+  font-size:12px;
+  border-radius:5px;
+  white-space:nowrap;
+}
+
+.nav-cta:hover,.btn-red:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px #ff263d35;
+  background:#ff4054;
+}
+
+.menu-toggle{
+  display:none;
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:white;
+  width:43px;
+  height:43px;
+  border-radius:8px;
+  font-size:22px;
+}
+
+/* هیرو */
+.hero{
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border-bottom:1px solid var(--border);
+  background:
+    linear-gradient(270deg,#090a0e 5%,rgba(9,10,14,.94) 38%,rgba(9,10,14,.42) 100%),
+    radial-gradient(ellipse at 70% 50%,#50121b 0%,#171016 40%,#090a0e 75%);
+}
+
+.hero-grid{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  opacity:.15;
+  background-image:
+    linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);
+  background-size:55px 55px;
+  mask-image:linear-gradient(90deg,black,transparent);
+}
+
+.hero-glow{
+  position:absolute;
+  z-index:-1;
+  width:450px;
+  height:450px;
+  border-radius:50%;
+  left:5%;
+  top:12%;
+  background:#ff263d;
+  opacity:.09;
+  filter:blur(100px);
+  animation:glowMove 7s ease-in-out infinite alternate;
+}
+
+@keyframes glowMove{
+  from{transform:translate(0,0) scale(.8)}
+  to{transform:translate(80px,30px) scale(1.2)}
+}
+
+.hero-content{
+  padding:95px 0 110px;
+  max-width:790px;
+  position:relative;
+  animation:heroEnter 1s ease both;
+}
+
+@keyframes heroEnter{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#ff7d8a;
+  border:1px solid #ff263d40;
+  background:#ff263d0d;
+  padding:7px 14px;
+  font-size:11px;
+  letter-spacing:.5px;
+  margin-bottom:25px;
+}
+
+.eyebrow span{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 15px var(--red);
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  50%{opacity:.3;transform:scale(.7)}
+}
+
+.hero h1{
+  font-size:clamp(38px,6vw,75px);
+  font-weight:900;
+  line-height:1.45;
+  letter-spacing:-2px;
+  margin-bottom:18px;
+}
+
+.hero h1 .accent{
+  color:var(--red);
+  position:relative;
+  display:inline-block;
+}
+
+.hero h1 .accent::after{
+  content:"";
+  height:5px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:100%;
+  background:linear-gradient(90deg,transparent,var(--red));
+}
+
+.hero-description{
+  max-width:570px;
+  color:#b2b5c0;
+  font-size:14px;
+  line-height:2.3;
+  margin-bottom:32px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 24px;
+  border-radius:5px;
+  font-size:13px;
+}
+
+.btn-red{
+  background:var(--red);
+  color:white;
+}
+
+.btn-ghost{
+  border:1px solid #ffffff30;
+  color:white;
+  background:#ffffff05;
+}
+
+.btn-ghost:hover{
+  background:#ffffff10;
+  border-color:#ffffff65;
+}
+
+.hero-bottom{
+  display:flex;
+  align-items:center;
+  gap:25px;
+  margin-top:48px;
+  flex-wrap:wrap;
+}
+
+.hero-mini{
+  border-right:2px solid var(--red);
+  padding-right:12px;
+}
+
+.hero-mini strong{
+  display:block;
+  font-size:16px;
+}
+
+.hero-mini span{
+  color:var(--muted);
+  font-size:10px;
+}
+
+/* تزئینات قهرمان */
+.hero-side-label{
+  position:absolute;
+  left:4%;
+  top:50%;
+  transform:translateY(-50%) rotate(-90deg);
+  transform-origin:center;
+  color:#ffffff24;
+  letter-spacing:6px;
+  font-size:11px;
+  font-weight:900;
+}
+
+.scroll-indicator{
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  color:#888;
+  font-size:10px;
+  letter-spacing:2px;
+}
+
+.scroll-indicator::after{
+  content:"";
+  display:block;
+  height:25px;
+  width:1px;
+  background:var(--red);
+  margin:8px auto 0;
+  animation:scrollLine 1.5s infinite;
+}
+
+@keyframes scrollLine{
+  0%,100%{transform:scaleY(.4);transform-origin:top}
+  50%{transform:scaleY(1);transform-origin:top}
+}
+
+/* نوار اطلاعات */
+.metrics{
+  border-bottom:1px solid var(--border);
+  background:#0d0f14;
+}
+
+.metrics-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.metric{
+  padding:25px 15px;
+  text-align:center;
+  border-left:1px solid var(--border);
+}
+
+.metric:last-child{border-left:0}
+
+.metric strong{
+  font-size:30px;
+  font-weight:900;
+  display:block;
+  line-height:1.5;
+}
+
+.metric strong i{
+  color:var(--red);
+  font-style:normal;
+}
+
+.metric span{
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* تیتر بخش‌ها */
+.section{
+  padding:100px 0;
+  position:relative;
+}
+
+.section-head{
+  margin-bottom:45px;
+}
+
+.section-head.center{text-align:center}
+
+.section-kicker{
+  color:var(--red);
+  font-size:11px;
+  letter-spacing:2px;
+  font-weight:900;
+  margin-bottom:10px;
+  display:block;
+}
+
+.section-title{
+  font-size:clamp(26px,4vw,42px);
+  font-weight:900;
+  line-height:1.6;
+}
+
+.section-title span{color:var(--red)}
+
+.section-subtitle{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.title-mark{
+  width:70px;
+  height:4px;
+  background:var(--red);
+  margin-top:17px;
+}
+
+.center .title-mark{margin:17px auto}
+
+/* رشته‌ها */
+.sports-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.sport-card{
+  min-height:240px;
+  position:relative;
+  overflow:hidden;
+  padding:30px 25px;
+  background:linear-gradient(145deg,#171a22,#0f1117);
+  border:1px solid var(--border);
+  transition:transform .35s,border-color .35s,box-shadow .35s;
+  isolation:isolate;
+}
+
+.sport-card::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  opacity:0;
+  background:radial-gradient(circle at 100% 0%,#ff263d25,transparent 60%);
+  transition:opacity .35s;
+}
+
+.sport-card::after{
+  content:"";
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:0;
+  height:3px;
+  background:var(--red);
+  transition:width .4s;
+}
+
+.sport-card:hover{
+  transform:translateY(-8px);
+  border-color:#ff263d60;
+  box-shadow:0 20px 50px #00000030;
+}
+
+.sport-card:hover::before{opacity:1}
+.sport-card:hover::after{width:100%}
+
+.sport-number{
+  position:absolute;
+  top:15px;
+  left:20px;
+  font-size:12px;
+  color:#555a66;
+  font-weight:900;
+}
+
+.sport-icon{
+  width:55px;
+  height:55px;
+  display:grid;
+  place-items:center;
+  background:#ff263d12;
+  border:1px solid #ff263d30;
+  color:#ff6475;
+  font-size:27px;
+  margin-bottom:23px;
+  transition:transform .3s,background .3s;
+}
+
+.sport-card:hover .sport-icon{
+  transform:rotate(-7deg) scale(1.08);
+  background:#ff263d24;
+}
+
+.sport-card h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.sport-card p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:2.2;
+}
+
+.sport-more{
+  display:inline-block;
+  margin-top:15px;
+  color:#ff6978;
+  font-size:11px;
+  font-weight:800;
+}
+
+/* بخش معرفی */
+.about{
+  background:#0e1016;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:65px;
+  align-items:center;
+}
+
+.about-visual{
+  min-height:390px;
+  position:relative;
+  display:grid;
+  place-items:center;
+  background:
+    linear-gradient(145deg,#1a1c25,#0c0d12);
+  border:1px solid var(--border);
+  overflow:hidden;
+}
+
+.about-visual::before{
+  content:"";
+  position:absolute;
+  width:240px;
+  height:240px;
+  border:1px solid #ff263d55;
+  transform:rotate(45deg);
+  animation:rotateBox 25s linear infinite;
+}
+
+.about-visual::after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border:1px solid #ffffff15;
+  transform:rotate(45deg);
+}
+
+@keyframes rotateBox{
+  to{transform:rotate(405deg)}
+}
+
+.about-emblem{
+  z-index:1;
+  width:140px;
+  height:140px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(145deg,#ff364d,#9f071c);
+  clip-path:polygon(50% 0,90% 20%,100% 50%,80% 90%,50% 100%,20% 90%,0 50%,10% 20%);
+  font-size:60px;
+  box-shadow:0 0 70px #ff263d25;
+}
+
+.visual-caption{
+  position:absolute;
+  bottom:22px;
+  right:25px;
+  left:25px;
+  display:flex;
+  justify-content:space-between;
+  color:#9297a5;
+  font-size:10px;
+  z-index:2;
+}
+
+.about-copy p{
+  color:#a8acb8;
+  font-size:13px;
+  line-height:2.5;
+  margin:20px 0;
+}
+
+.feature-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+  margin:25px 0;
+}
+
+.feature{
+  border:1px solid var(--border);
+  background:#ffffff03;
+  padding:12px;
+  font-size:11px;
+  color:#d8d9df;
+}
+
+.feature span{
+  color:var(--red);
+  margin-left:7px;
+}
+
+/* برنامه کلاس‌ها */
+.schedule-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.schedule-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  padding:28px;
+  position:relative;
+  overflow:hidden;
+}
+
+.schedule-card::before{
+  content:"";
+  position:absolute;
+  right:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background:var(--red);
+}
+
+.schedule-card h3{
+  font-size:19px;
+  margin-bottom:20px;
+}
+
+.schedule-item{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:15px 0;
+  border-bottom:1px solid var(--border);
+  font-size:12px;
+}
+
+.schedule-item:last-of-type{border:0}
+.schedule-item span{color:var(--muted);text-align:left}
+
+.notice{
+  margin-top:20px;
+  background:#ff263d0b;
+  border:1px solid #ff263d2b;
+  padding:15px;
+  color:#ff9ca7;
+  font-size:11px;
+}
+
+/* مربیان */
+.coaches-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.coach-card{
+  text-align:center;
+  background:linear-gradient(160deg,#181b23,#101116);
+  border:1px solid var(--border);
+  padding:30px 15px;
+  transition:.3s;
+}
+
+.coach-card:hover{
+  border-color:#ff263d70;
+  transform:translateY(-6px);
+}
+
+.coach-avatar{
+  width:85px;
+  height:85px;
+  display:grid;
+  place-items:center;
+  margin:0 auto 20px;
+  border:1px solid #ff263d60;
+  background:#ff263d12;
+  border-radius:50%;
+  font-size:37px;
+  position:relative;
+}
+
+.coach-avatar::after{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border:1px solid #ffffff10;
+  border-radius:50%;
+}
+
+.coach-card h3{font-size:15px}
+.coach-card p{
+  font-size:11px;
+  color:var(--muted);
+  margin-top:7px;
+}
+
+/* کمربندها */
+.belts-section{
+  background:#0e1016;
+  border-block:1px solid var(--border);
+}
+
+.belts{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+}
+
+.belt{
+  width:125px;
+  padding:20px 12px;
+  background:#151820;
+  border:1px solid var(--border);
+  text-align:center;
+  transition:.3s;
+}
+
+.belt:hover{
+  transform:translateY(-5px);
+  border-color:#ff263d55;
+}
+
+.belt-color{
+  height:7px;
+  border-radius:2px;
+  margin-bottom:13px;
+  box-shadow:0 3px 15px #0004;
+}
+
+.belt strong{font-size:12px}
+
+/* ویدئوها */
+.video-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.video-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  padding:12px;
+  transition:.3s;
+}
+
+.video-card:hover{
+  border-color:#ff263d60;
+  transform:translateY(-5px);
+}
+
+.video-card video{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  background:#050609;
+  object-fit:contain;
+  border:1px solid #ffffff0d;
+}
+
+.video-info{padding:14px 5px 5px}
+.video-info small{color:var(--red);font-size:10px}
+.video-info h3{font-size:14px;margin-top:5px}
+
+/* تماس */
+.contact-section{
+  background:
+    radial-gradient(ellipse at 10% 90%,#ff263d10,transparent 35%),
+    #0d0f14;
+  border-top:1px solid var(--border);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.contact-card{
+  background:#151820;
+  border:1px solid var(--border);
+  padding:25px;
+  transition:border-color .3s;
+}
+
+.contact-card:hover{border-color:#ff263d60}
+
+.contact-card .contact-icon{
+  font-size:25px;
+  margin-bottom:12px;
+}
+
+.contact-card h3{
+  font-size:15px;
+  margin-bottom:8px;
+}
+
+.contact-card p{
+  color:var(--muted);
+  font-size:12px;
+  overflow-wrap:anywhere;
+}
+
+.contact-action{
+  display:inline-block;
+  margin-top:15px;
+  color:#ff6475;
+  font-size:12px;
+  font-weight:800;
+}
+
+.map-card{
+  margin-top:20px;
+  border:1px solid var(--border);
+  background:linear-gradient(120deg,#181b24,#101116);
+  padding:30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.map-card p{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:8px;
+}
+
+/* فوتر */
+footer{
+  padding:30px 0;
+  background:#08090c;
+  border-top:1px solid var(--border);
+}
+
+.footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-brand{font-size:14px;font-weight:900}
+.footer-brand span{color:var(--red)}
+footer p{font-size:10px;color:#747986}
+
+/* انیمیشن ورود */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.delay-1{transition-delay:.1s}
+.delay-2{transition-delay:.2s}
+.delay-3{transition-delay:.3s}
+
+/* نشانگر موس */
+.cursor-glow{
+  position:fixed;
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  background:#ff263d;
+  opacity:.035;
+  filter:blur(80px);
+  pointer-events:none;
+  z-index:-1;
+  transform:translate(-50%,-50%);
+}
+
+/* نوار موبایل */
+.mobile-contact{
+  display:none;
+}
+
+/* واکنش‌گرایی */
+@media(max-width:950px){
+  nav{gap:13px}
+  nav a{font-size:11px}
+  .nav-cta{padding:9px 12px;font-size:11px}
+  .about-grid{gap:30px}
+  .coaches-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:760px){
+  .navbar{min-height:72px}
+  .menu-toggle{display:block}
+  .nav-cta{display:none}
+
+  nav{
+    display:none;
+    position:absolute;
+    top:72px;
+    right:0;
+    left:0;
+    padding:18px 5%;
+    background:rgba(10,11,15,.98);
+    border-bottom:1px solid var(--border);
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+  }
+
+  nav.open{display:flex}
+
+  nav a{
+    font-size:13px;
+    padding:12px 0;
+    border-bottom:1px solid var(--border);
+  }
+
+  nav a::after{display:none}
+
+  .hero{min-height:580px}
+  .hero-content{padding:75px 0 90px}
+  .hero h1{letter-spacing:-1px}
+  .hero-side-label{display:none}
+
+  .metrics-grid{grid-template-columns:repeat(2,1fr)}
+  .metric:nth-child(2){border-left:0}
+  .metric:nth-child(-n+2){border-bottom:1px solid var(--border)}
+
+  .section{padding:70px 0}
+  .sports-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .about-visual{min-height:300px}
+  .schedule-grid{grid-template-columns:1fr}
+  .video-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .map-card{align-items:flex-start;flex-direction:column}
+  .mobile-contact{
+    display:block;
+    position:fixed;
+    bottom:12px;
+    right:12px;
+    left:12px;
+    z-index:900;
+    padding:9px;
+    background:rgba(16,18,24,.94);
+    border:1px solid #ffffff1a;
+    backdrop-filter:blur(15px);
+    border-radius:10px;
+    box-shadow:0 10px 40px #0008;
+  }
+
+  .mobile-contact a{
+    display:block;
+    text-align:center;
+    padding:10px;
+    background:var(--red);
+    border-radius:6px;
+    color:white;
+    font-size:12px;
+    font-weight:900;
+  }
+
+  footer{padding-bottom:95px}
+}
+
+@media(max-width:470px){
+  .brand-text strong{font-size:14px}
+  .brand-symbol{width:40px;height:40px}
+  .hero h1{font-size:39px}
+  .hero-description{font-size:12px}
+  .hero-actions .btn{width:100%}
+  .hero-bottom{gap:15px}
+  .hero-mini strong{font-size:14px}
+  .sports-grid{grid-template-columns:1fr}
+  .sport-card{min-height:auto;padding:25px}
+  .video-grid{grid-template-columns:1fr}
+  .feature-list{grid-template-columns:1fr}
+  .coaches-grid{grid-template-columns:repeat(2,1fr)}
+  .belt{width:calc(50% - 8px)}
+  .section-head{margin-bottom:30px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+
+  .reveal{
+    opacity:1;
+    transform:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-line"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<header>
+  <div class="container navbar">
+
+    <a href="#home" class="brand">
+      <div class="brand-symbol">م</div>
+      <div class="brand-text">
+        <strong>باشگاه ورزشی مینایی</strong>
+        <small>MINAEI SPORTS CLUB</small>
+      </div>
+    </a>
+
+    <nav id="mainNav">
+      <a href="#home">صفحه اصلی</a>
+      <a href="#sports">رشته‌های ورزشی</a>
+      <a href="#about">درباره باشگاه</a>
+      <a href="#schedule">برنامه کلاس‌ها</a>
+      <a href="#coaches">مربیان</a>
+      <a href="#videos">ویدئوها</a>
+      <a href="#contact">ارتباط با ما</a>
+    </nav>
+
+    <a class="nav-cta" href="#contact">شروع ثبت‌نام ↗</a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="باز کردن منو" aria-expanded="false">☰</button>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        <span></span>
+        DISCIPLINE · STRENGTH · PERFORMANCE
+      </div>
+
+      <h1>
+        محدودیت‌ها<br>
+        برای <span class="accent">شکستن</span> هستند.
+      </h1>
+
+      <p class="hero-description">
+        اینجا فقط تمرین نمی‌کنی؛ تمرکزت را تقویت می‌کنی،
+        مهارت‌هایت را توسعه می‌دهی و قدم‌به‌قدم پیشرفت می‌کنی.
+        به باشگاه ورزشی مینایی خوش آمدی.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#sports" class="btn btn-red">کشف رشته‌های ورزشی <span>↙</span></a>
+        <a href="#about" class="btn btn-ghost">درباره باشگاه</a>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-mini">
+          <strong>۴ سال به بالا</strong>
+          <span>شروع مسیر ورزشی</span>
+        </div>
+        <div class="hero-mini">
+          <strong>رشته‌های متنوع</strong>
+          <span>انتخاب مسیر مورد علاقه</span>
+        </div>
+        <div class="hero-mini">
+          <strong>کرمانشاه</strong>
+          <span>شهرک بسیج</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero-side-label">BUILT THROUGH DISCIPLINE</div>
+  <div class="scroll-indicator">SCROLL TO EXPLORE</div>
+</section>
+
+<!-- METRICS -->
+<section class="metrics" aria-label="ویژگی‌های باشگاه">
+  <div class="container metrics-grid">
+
+    <div class="metric reveal">
+      <strong><i>۰۱</i></strong>
+      <span>تمرکز بر پیشرفت</span>
+    </div>
+
+    <div class="metric reveal delay-1">
+      <strong><i>۰۲</i></strong>
+      <span>تقویت مهارت</span>
+    </div>
+
+    <div class="metric reveal delay-2">
+      <strong><i>۰۳</i></strong>
+      <span>نظم و استمرار</span>
+    </div>
+
+    <div class="metric reveal delay-3">
+      <strong><i>۰۴</i></strong>
+      <span>فعالیت ورزشی</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- SPORTS -->
+<section class="section" id="sports">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-kicker">TRAINING PROGRAMS / 01</span>
+      <h2 class="section-title">رشته‌ای را انتخاب کن که<br><span>تو را به چالش می‌کشد.</span></h2>
+      <div class="title-mark"></div>
+      <p class="section-subtitle">
+        از هنرهای رزمی تا آمادگی جسمانی؛ مسیر پیشرفت خودت را پیدا کن.
+      </p>
+    </div>
+
+    <div class="sports-grid">
+
+      <article class="sport-card reveal">
+        <span class="sport-number">01 / MARTIAL ARTS</span>
+        <div class="sport-icon">🥋</div>
+        <h3>کاراته</h3>
+        <p>آموزش تکنیک، تمرکز، نظم و آمادگی بدنی با تمرین اصولی.</p>
+        <a href="#contact" class="sport-more">اطلاعات ثبت‌نام ↙</a>
+      </article>
+
+      <article class="sport-card reveal delay-1">
+        <span class="sport-number">02 / NINJA</span>
+        <div class="sport-icon">忍</div>
+        <h3>نینجای مبارز</h3>
+        <p>تقویت چابکی، تعادل، هماهنگی حرکتی و مهارت‌های ورزشی.</p>
+        <a href="#contact" class="sport-more">اطلاعات ثبت‌نام ↙</a>
+      </article>
+
+      <article class="sport-card reveal delay-2">
+        <span class="sport-number">03 / GYMNASTICS</span>
+        <div class="sport-icon">↗</div>
+        <h3>ژیمناستیک</h3>
+        <p>توسعه انعطاف‌پذیری، کنترل بدن و مهارت‌های حرکتی.</p>
+        <a href="#contact" class="sport-more">اطلاعات ثبت‌نام ↙</a>
+      </article>
+
+      <article class="sport-card reveal">
+        <span class="sport-number">04 / PARKOUR</span>
+        <div class="sport-icon">⌁</div>
+        <h3>پارکور</h3>
+        <p>تمرین چابکی و حرکت با رعایت اصول ایمنی و نظارت مربی.</p>
+        <a href="#contact" class="sport-more">اطلاعات ثبت‌نام ↙</a>
+      </article>
+
+      <article class="sport-card reveal delay-1">
+        <span class="sport-number">05 / FITNESS</span>
+        <div class="sport-icon">↯</div>
+        <h3>آمادگی جسمانی</h3>
+        <p>تقویت توان بدنی، استقامت و آمادگی برای فعالیت‌های ورزشی.</p>
+        <a href="#contact" class="sport-more">اطلاعات ثبت‌نام ↙</a>
+      </article>
+
+      <article class="sport-card reveal delay-2">
+        <span class="sport-number">06 / AEROBIC</span>
+        <div class="sport-icon">〰</div>
+        <h3>ایروبیک</h3>
+        <p>تمرین هوازی، تحرک بیشتر و فعالیت ورزشی پرنشاط.</p>
+        <a href="#contact" class="sport-more">اطلاعات ثبت‌نام ↙</a>
+      </article>
+
+      <article class="sport-card reveal">
+        <span class="sport-number">07 / SELF DEFENSE</span>
+        <div class="sport-icon">◈</div>
+        <h3>دفاع شخصی</h3>
+        <p>آشنایی با اصول دفاع شخصی در محیط ورزشی و کنترل‌شده.</p>
+        <a href="#contact" class="sport-more">اطلاعات ثبت‌نام ↙</a>
+      </article>
+
+      <article class="sport-card reveal delay-1">
+        <span class="sport-number">08 / KICKBOXING</span>
+        <div class="sport-icon">✦</div>
+        <h3>کیک‌بوکسینگ</h3>
+        <p>آموزش مهارت‌های رزمی ورزشی زیر نظر مربی.</p>
+        <a href="#contact" class="sport-more">اطلاعات ثبت‌نام ↙</a>
+      </article>
+
+      <article class="sport-card reveal delay-2">
+        <span class="sport-number">09 / MARTIAL SKILLS</span>
+        <div class="sport-icon">⚔</div>
+        <h3>آموزش سلاح سرد</h3>
+        <p>تمرین ورزشی کنترل‌شده با رعایت مقررات و نظارت مربی.</p>
+        <a href="#contact" class="sport-more">اطلاعات ثبت‌نام ↙</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+
+    <div class="about-visual reveal">
+      <div class="about-emblem">م</div>
+      <div class="visual-caption">
+        <span>MINAEI SPORTS CLUB</span>
+        <span>EST. KERMANSHAH</span>
+      </div>
+    </div>
+
+    <div class="about-copy reveal delay-1">
+      <span class="section-kicker">OUR PHILOSOPHY / 02</span>
+
+      <h2 class="section-title">
+        پیشرفت اتفاقی نیست؛<br>
+        <span>ساخته می‌شود.</span>
+      </h2>
+
+      <div class="title-mark"></div>
+
+      <p>
+        باشگاه ورزشی مینایی فضایی برای یادگیری، تمرین و پیشرفت ورزشی است.
+        هدف، تقویت مهارت‌ها و ایجاد عادت‌های مثبت از طریق تمرین منظم
+        و آموزش زیر نظر مربی است.
+      </p>
+
+      <div class="feature-list">
+        <div class="feature"><span>✦</span> رشته‌های ورزشی متنوع</div>
+        <div class="feature"><span>✦</span> پذیرش از ۴ سال به بالا</div>
+        <div class="feature"><span>✦</span> برنامه کلاس مشخص</div>
+        <div class="feature"><span>✦</span> امکان استعلام ثبت‌نام</div>
+      </div>
+
+      <a href="#contact" class="btn btn-red">با باشگاه ارتباط بگیر ↗</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="section" id="schedule">
+  <div class="container">
+
+    <div class="section-head center reveal">
+      <span class="section-kicker">WEEKLY TRAINING / 03</span>
+      <h2 class="section-title">برنامه <span>کلاس‌ها</span></h2>
+      <div class="title-mark"></div>
+      <p class="section-subtitle">برای دریافت ساعت دقیق هر کلاس با باشگاه تماس بگیرید.</p>
+    </div>
+
+    <div class="schedule-grid">
+
+      <div class="schedule-card reveal">
+        <h3>◈ روزهای فرد</h3>
+
+        <div class="schedule-item">
+          <strong>کاراته</strong>
+          <span>با هماهنگی مربی</span>
+        </div>
+
+        <div class="schedule-item">
+          <strong>ژیمناستیک</strong>
+          <span>با هماهنگی مربی</span>
+        </div>
+
+        <div class="schedule-item">
+          <strong>نینجای مبارز</strong>
+          <span>با هماهنگی مربی</span>
+        </div>
+      </div>
+
+      <div class="schedule-card reveal delay-1">
+        <h3>◈ روزهای زوج</h3>
+
+        <div class="schedule-item">
+          <strong>آمادگی جسمانی</strong>
+          <span>با هماهنگی مربی</span>
+        </div>
+
+        <div class="schedule-item">
+          <strong>نینجای مبارز</strong>
+          <span>با هماهنگی مربی</span>
+        </div>
+
+        <div class="schedule-item">
+          <strong>ثبت‌نام رشته‌ها</strong>
+          <span>تماس با باشگاه</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="notice reveal">
+      توجه: ساعت دقیق کلاس‌ها، ظرفیت هر رشته و شهریه را قبل از مراجعه تلفنی استعلام کنید.
+    </div>
+
+  </div>
+</section>
+
+<!-- COACHES -->
+<section class="section" id="coaches">
+  <div class="container">
+
+    <div class="section-head center reveal">
+      <span class="section-kicker">COACHING TEAM / 04</span>
+      <h2 class="section-title">تیم <span>مربیان</span></h2>
+      <div class="title-mark"></div>
+      <p class="section-subtitle">مربیان باشگاه ورزشی مینایی</p>
+    </div>
+
+    <div class="coaches-grid">
+
+      <article class="coach-card reveal">
+        <div class="coach-avatar">🥋</div>
+        <h3>امیر مینایی</h3>
+        <p>مربی باشگاه</p>
+      </article>
+
+      <article class="coach-card reveal delay-1">
+        <div class="coach-avatar">✦</div>
+        <h3>محمد جلیلیان</h3>
+        <p>مربی باشگاه</p>
+      </article>
+
+      <article class="coach-card reveal delay-2">
+        <div class="coach-avatar">🏅</div>
+        <h3>فاطمه کیانی</h3>
+        <p>مربی باشگاه</p>
+      </article>
+
+      <article class="coach-card reveal delay-3">
+        <div class="coach-avatar">◈</div>
+        <h3>علی مینایی</h3>
+        <p>مربی باشگاه</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- BELTS -->
+<section class="section belts-section" id="belts">
+  <div class="container">
+
+    <div class="section-head center reveal">
+      <span class="section-kicker">LEVEL UP / 05</span>
+      <h2 class="section-title">مسیر <span>پیشرفت</span></h2>
+      <div class="title-mark"></div>
+      <p class="section-subtitle">
+        نمایش درجات کمربند؛ ترتیب رسمی را از مربی رشته خود استعلام کنید.
+      </p>
+    </div>
+
+    <div class="belts">
+
+      <div class="belt reveal">
+        <div class="belt-color" style="background:#f5f5f5"></div>
+        <strong>سفید</strong>
+      </div>
+
+      <div class="belt reveal delay-1">
+        <div class="belt-color" style="background:#facc15"></div>
+        <strong>زرد</strong>
+      </div>
+
+      <div class="belt reveal delay-2">
+        <div class="belt-color" style="background:#22c55e"></div>
+        <strong>سبز</strong>
+      </div>
+
+      <div class="belt reveal delay-3">
+        <div class="belt-color" style="background:#3b82f6"></div>
+        <strong>آبی</strong>
+      </div>
+
+      <div class="belt reveal">
+        <div class="belt-color" style="background:#ef4444"></div>
+        <strong>قرمز</strong>
+      </div>
+
+      <div class="belt reveal delay-1">
+        <div class="belt-color" style="background:#854d0e"></div>
+        <strong>قهوه‌ای</strong>
+      </div>
+
+      <div class="belt reveal delay-2">
+        <div class="belt-color" style="background:#050505"></div>
+        <strong>مشکی</strong>
+      </div>
+
+      <div class="belt reveal delay-3">
+        <div class="belt-color" style="background:linear-gradient(90deg,#050505 50%,#ddd 50%)"></div>
+        <strong>دان ۱ تا ۱۰</strong>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="section" id="videos">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-kicker">MEDIA CENTER / 06</span>
+      <h2 class="section-title">گالری <span>ویدئوها</span></h2>
+      <div class="title-mark"></div>
+      <p class="section-subtitle">ویدئوهای کاتا را از داخل سایت مشاهده کنید.</p>
+    </div>
+
+    <div class="video-grid">
+
+      <article class="video-card reveal">
+        <video controls preload="metadata" playsinline>
+          <source src="https://cdn.imgurl.ir/uploads/l7039_VID_20261009_221948_230.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <small>TRAINING VIDEO / 01</small>
+          <h3>فیلم کاتا شماره ۱</h3>
+        </div>
+      </article>
+
+      <article class="video-card reveal delay-1">
+        <video controls preload="metadata" playsinline>
+          <source src="https://cdn.imgurl.ir/uploads/n963476_VID_20261009_221948_069.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <small>TRAINING VIDEO / 02</small>
+          <h3>فیلم کاتا شماره ۲</h3>
+        </div>
+      </article>
+
+      <article class="video-card reveal delay-2">
+        <video controls preload="metadata" playsinline>
+          <source src="https://cdn.imgurl.ir/uploads/x22834_VID_20261009_221948_983.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <small>TRAINING VIDEO / 03</small>
+          <h3>فیلم کاتا شماره ۳</h3>
+        </div>
+      </article>
+
+      <article class="video-card reveal">
+        <video controls preload="metadata" playsinline>
+          <source src="https://cdn.imgurl.ir/uploads/y56625_VID_20261009_221948_505.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <small>TRAINING VIDEO / 04</small>
+          <h3>فیلم کاتا شماره ۴</h3>
+        </div>
+      </article>
+
+      <article class="video-card reveal delay-1">
+        <video controls preload="metadata" playsinline>
+          <source src="https://cdn.imgurl.ir/uploads/y786966_VID_20261009_221948_883.mp4" type="video/mp4">
+        </video>
+        <div class="video-info">
+          <small>TRAINING VIDEO / 05</small>
+          <h3>فیلم کاتا شماره ۵</h3>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <span class="section-kicker">GET IN TOUCH / 07</span>
+      <h2 class="section-title">آماده‌ای <span>شروع کنی؟</span></h2>
+      <div class="title-mark"></div>
+      <p class="section-subtitle">برای مشاوره، استعلام شهریه و هماهنگی ثبت‌نام با ما تماس بگیر.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card reveal">
+        <div class="contact-icon">☎</div>
+        <h3>تماس با باشگاه</h3>
+        <p>09185557624</p>
+        <a class="contact-action" href="tel:09183329667">تماس مستقیم ↗</a>
+      </div>
+
+      <div class="contact-card reveal delay-1">
+        <div class="contact-icon">✆</div>
+        <h3>شماره تماس دوم</h3>
+        <p>09183329667</p>
+        <a class="contact-action" href="tel:09185557624">تماس مستقیم ↗</a>
+      </div>
+
+      <div class="contact-card reveal">
+        <div class="contact-icon">⌖</div>
+        <h3>آدرس باشگاه</h3>
+        <p>کرمانشاه، شهرک بسیج، انتهای خیابان اصلی، سمت چپ، باشگاه مینایی</p>
+        <a class="contact-action"
+           href="https://balad.ir/p/PW3dYI0QLiyvbu"
+           target="_blank" rel="noopener noreferrer">مسیریابی با بلد ↗</a>
+      </div>
+
+      <div class="contact-card reveal delay-1">
+        <div class="contact-icon">◈</div>
+        <h3>شهریه و ثبت‌نام</h3>
+        <p>شهریه تقریبی اعلام‌شده: ۱ تا ۱.۳ میلیون تومان، بسته به رشته و شرایط ثبت‌نام.</p>
+        <a class="contact-action" href="tel:09183329667">استعلام قیمت دقیق ↗</a>
+      </div>
+
+    </div>
+
+    <div class="map-card reveal">
+      <div>
+        <span class="section-kicker">FIND OUR LOCATION</span>
+        <h3>باشگاه ورزشی مینایی | کرمانشاه</h3>
+        <p>برای مشاهده موقعیت و شروع مسیریابی، روی دکمه زیر بزنید.</p>
+      </div>
+
+      <a class="btn btn-red"
+         href="https://balad.ir/p/PW3dYI0QLiyvbu"
+         target="_blank" rel="noopener noreferrer">
+        باز کردن نقشه ↗
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">باشگاه ورزشی <span>مینایی</span></div>
+    <p>قدرت، تمرکز، تسلط | کرمانشاه</p>
+    <p>© تمامی حقوق محفوظ است.</p>
+  </div>
+</footer>
+
+<div class="mobile-contact">
+  <a href="tel:09183329667">☎ تماس با باشگاه</a>
+</div>
+
+<script>
+/* منوی موبایل */
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+
+menuToggle.addEventListener('click', function () {
+  const isOpen = mainNav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.textContent = isOpen ? '✕' : '☰';
+});
+
+mainNav.querySelectorAll('a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    mainNav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '☰';
+  });
+});
+
+/* ظاهرشدن بخش‌ها هنگام اسکرول */
+const revealElements = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -30px 0px'
+  });
+
+  revealElements.forEach(function (element) {
+    observer.observe(element);
+  });
+} else {
+  revealElements.forEach(function (element) {
+    element.classList.add('visible');
+  });
+}
+
+/* نور ملایم دنبال‌کننده موس در دستگاه‌های دارای موس */
+const cursorGlow = document.getElementById('cursorGlow');
+
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  window.addEventListener('pointermove', function (event) {
+    cursorGlow.style.left = event.clientX + 'px';
+    cursorGlow.style.top = event.clientY + 'px';
+  }, { passive: true });
+} else {
+  cursorGlow.style.display = 'none';
+}
+</script>
+
+</body>
+</html>
